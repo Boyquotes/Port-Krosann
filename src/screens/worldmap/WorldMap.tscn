@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://prefabs/info_window/InfoWindow.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/WorldMapHD.png" type="Texture" id=2]
+[ext_resource path="res://screens/worldmap/WorldMap.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/to-ship-btn.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/to-ship-btn-hover.png" type="Texture" id=8]
+[ext_resource path="res://prefabs/harbor_map_button/HarborMapButton.tscn" type="PackedScene" id=10]
+
+[node name="WorldMap" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldMap" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="HarborButtons" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Krosann" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 841.0
+margin_top = 492.0
+margin_right = 882.0
+margin_bottom = 532.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Soradar" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 146.0
+margin_top = 670.0
+margin_right = 187.0
+margin_bottom = 710.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 1
+
+[node name="HarborMapButton" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 1160.0
+margin_top = 304.0
+margin_right = 1201.0
+margin_bottom = 344.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 2
+
+[node name="HarborMapButton2" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 1559.0
+margin_top = 419.0
+margin_right = 1600.0
+margin_bottom = 459.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 3
+
+[node name="BtnToShip" type="TextureButton" parent="."]
+margin_left = 1785.0
+margin_top = 953.0
+margin_right = 1883.0
+margin_bottom = 1050.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+
+[node name="InfoWindow" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[connection signal="button_up" from="BtnToShip" to="." method="_on_BtnToShip_button_up"]
