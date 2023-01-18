@@ -1,6 +1,18 @@
 extends Control
 
+enum ShipIconPos {
+	N
+	NE
+	E
+	SE
+	S
+	SW
+	W
+	NW
+}
+
 export(Harbor.Harbors) var harbor = Harbor.Harbors.Krosann
+export(ShipIconPos) var shipIconPos = ShipIconPos.NW
 
 var myMarket: Market.Market
 
@@ -107,6 +119,28 @@ func _handle_ship_icon():
 		$ShipIcon.visible = true
 	else:
 		$ShipIcon.visible = false
+	
+	var posOffset = 45
+	if shipIconPos == ShipIconPos.N:
+		$ShipIcon.position.y = -posOffset
+	elif shipIconPos == ShipIconPos.NE:
+		$ShipIcon.position.y = -posOffset
+		$ShipIcon.position.x = posOffset
+	elif shipIconPos == ShipIconPos.E:
+		$ShipIcon.position.x = posOffset
+	elif shipIconPos == ShipIconPos.SE:
+		$ShipIcon.position.y = posOffset * 2
+		$ShipIcon.position.x = posOffset * 2
+	elif shipIconPos == ShipIconPos.S:
+		$ShipIcon.position.y = posOffset * 2
+	elif shipIconPos == ShipIconPos.SW:
+		$ShipIcon.position.y = posOffset * 2
+		$ShipIcon.position.x = -posOffset * 2
+	elif shipIconPos == ShipIconPos.W:
+		$ShipIcon.position.x = -posOffset
+	elif shipIconPos == ShipIconPos.NW:
+		$ShipIcon.position.y = -posOffset
+		$ShipIcon.position.x = -posOffset
 
 func _on_Button_button_up():
 	if not Harbor.current == harbor:

@@ -25,43 +25,45 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Krosann" parent="HarborButtons" instance=ExtResource( 10 )]
-margin_left = 841.0
-margin_top = 492.0
-margin_right = 882.0
-margin_bottom = 532.0
+margin_left = 844.0
+margin_top = 504.0
+margin_right = 885.0
+margin_bottom = 544.0
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Soradar" parent="HarborButtons" instance=ExtResource( 10 )]
-margin_left = 146.0
-margin_top = 670.0
-margin_right = 187.0
-margin_bottom = 710.0
+margin_left = 139.0
+margin_top = 679.0
+margin_right = 180.0
+margin_bottom = 719.0
 __meta__ = {
 "_edit_group_": true
 }
 harbor = 1
 
 [node name="HarborMapButton" parent="HarborButtons" instance=ExtResource( 10 )]
-margin_left = 1160.0
-margin_top = 304.0
-margin_right = 1201.0
-margin_bottom = 344.0
+margin_left = 1172.0
+margin_top = 313.0
+margin_right = 1213.0
+margin_bottom = 353.0
 __meta__ = {
 "_edit_group_": true
 }
 harbor = 2
+shipIconPos = 4
 
 [node name="HarborMapButton2" parent="HarborButtons" instance=ExtResource( 10 )]
-margin_left = 1559.0
-margin_top = 419.0
-margin_right = 1600.0
-margin_bottom = 459.0
+margin_left = 1584.0
+margin_top = 447.0
+margin_right = 1625.0
+margin_bottom = 487.0
 __meta__ = {
 "_edit_group_": true
 }
 harbor = 3
+shipIconPos = 4
 
 [node name="BtnToShip" type="TextureButton" parent="."]
 margin_left = 1785.0
