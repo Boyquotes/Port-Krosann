@@ -22,19 +22,19 @@ position = Vector2( 0, 2 )
 
 [node name="Body" type="Sprite" parent="Window"]
 modulate = Color( 1, 1, 1, 0.901961 )
-position = Vector2( 407.438, 498.501 )
-scale = Vector2( 1.1896, 1.34796 )
+position = Vector2( 347, 405.5 )
+scale = Vector2( 1.01314, 1.06657 )
 texture = ExtResource( 1 )
 
 [node name="Header" type="Sprite" parent="Window"]
-position = Vector2( 403, 27.75 )
-scale = Vector2( 1.17994, 0.760274 )
+position = Vector2( 343, 27.75 )
+scale = Vector2( 1.0118, 0.760274 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 162.0
+margin_left = 137.0
 margin_top = 7.0
-margin_right = 636.0
+margin_right = 543.0
 margin_bottom = 57.0
 custom_colors/font_color = Color( 1, 0.933333, 0.737255, 1 )
 custom_fonts/font = ExtResource( 5 )
@@ -43,129 +43,123 @@ align = 1
 valign = 1
 
 [node name="Tooltip" type="Button" parent="."]
-margin_left = 4.0
 margin_top = 3.0
-margin_right = 802.0
+margin_right = 687.0
 margin_bottom = 56.0
 hint_tooltip = "Buy and sell goods on the market"
 focus_mode = 0
 enabled_focus_mode = 0
 flat = true
 
-[node name="Goods" type="Control" parent="."]
-margin_left = 27.0
-margin_top = 63.0
-margin_right = 777.0
-margin_bottom = 909.0
+[node name="Goods" type="Node2D" parent="."]
+position = Vector2( 34, 77 )
 __meta__ = {
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="Grain" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_right = -737.0
-margin_bottom = -846.0
+margin_left = 1.0
+margin_top = -9.0
+margin_right = 1.0
+margin_bottom = -9.0
 
 [node name="Corn" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 71.0
-margin_right = -737.0
-margin_bottom = -775.0
+margin_left = 1.0
+margin_top = 46.0
+margin_right = 1.0
+margin_bottom = 46.0
 kind = 1
 
 [node name="Vegetables" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 142.0
-margin_right = -737.0
-margin_bottom = -704.0
+margin_left = 1.0
+margin_top = 102.0
+margin_right = 1.0
+margin_bottom = 102.0
 kind = 3
 
 [node name="Fruits" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 213.0
-margin_right = -737.0
-margin_bottom = -633.0
+margin_left = 1.0
+margin_top = 158.0
+margin_right = 1.0
+margin_bottom = 158.0
 kind = 2
 
 [node name="Cotton" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 284.0
-margin_right = -737.0
-margin_bottom = -562.0
+margin_left = 1.0
+margin_top = 214.0
+margin_right = 1.0
+margin_bottom = 214.0
 kind = 4
 
 [node name="Beer" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 355.0
-margin_right = -737.0
-margin_bottom = -491.0
+margin_left = 1.0
+margin_top = 271.0
+margin_right = 1.0
+margin_bottom = 271.0
 kind = 5
 
 [node name="Bricks" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 426.0
-margin_right = -737.0
-margin_bottom = -420.0
+margin_left = 1.0
+margin_top = 327.0
+margin_right = 1.0
+margin_bottom = 327.0
 kind = 6
 
 [node name="Cocoa" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 497.0
-margin_right = -737.0
-margin_bottom = -349.0
+margin_left = 1.0
+margin_top = 383.0
+margin_right = 1.0
+margin_bottom = 383.0
 kind = 7
 
 [node name="Coffee" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 568.0
-margin_right = -737.0
-margin_bottom = -278.0
+margin_left = 1.0
+margin_top = 439.0
+margin_right = 1.0
+margin_bottom = 439.0
 kind = 8
 
 [node name="Sugar" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 640.0
-margin_right = -737.0
-margin_bottom = -206.0
+margin_left = 1.0
+margin_top = 494.0
+margin_right = 1.0
+margin_bottom = 494.0
 kind = 9
 
 [node name="Tabacco" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 712.0
-margin_right = -737.0
-margin_bottom = -134.0
+margin_left = 1.0
+margin_top = 550.0
+margin_right = 1.0
+margin_bottom = 550.0
 kind = 10
 
 [node name="Silk" parent="Goods" instance=ExtResource( 4 )]
-margin_left = 13.0
-margin_top = 784.0
-margin_right = -737.0
-margin_bottom = -62.0
+margin_left = 1.0
+margin_top = 605.0
+margin_right = 1.0
+margin_bottom = 605.0
 kind = 11
 
-[node name="BuySellAmount" type="Control" parent="."]
-margin_left = -2.0
-margin_top = 2.0
-margin_right = 38.0
-margin_bottom = 42.0
+[node name="BuySellAmount" type="Node2D" parent="."]
+position = Vector2( 603, 10 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="BtnBuySellAmount" type="TextureButton" parent="BuySellAmount"]
-margin_left = 721.0
-margin_top = 10.0
-margin_right = 789.0
-margin_bottom = 47.0
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 69.0
+margin_bottom = 39.0
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 7 )
 
 [node name="AmountLabel" type="Label" parent="BuySellAmount"]
-margin_left = 721.0
-margin_top = 12.0
-margin_right = 789.0
-margin_bottom = 44.0
+margin_left = 1.0
+margin_top = 4.0
+margin_right = 69.0
+margin_bottom = 36.0
 custom_colors/font_color = Color( 1, 0.933333, 0.737255, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "100"

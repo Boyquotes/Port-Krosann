@@ -5,29 +5,29 @@ export (Good.Goods) var kind: int = Good.Goods.Grain
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if (kind == Good.Goods.Grain):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-grain.png")
+		$Texture.texture = load("res://assets/images/goods/goods-grain.png")
 	if (kind == Good.Goods.Corn):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-corn.png")
+		$Texture.texture = load("res://assets/images/goods/goods-corn.png")
 	if (kind == Good.Goods.Vegetables):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-vegetables.png")
+		$Texture.texture = load("res://assets/images/goods/goods-vegetables.png")
 	if (kind == Good.Goods.Fruits):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-fruits.png")
+		$Texture.texture = load("res://assets/images/goods/goods-fruits.png")
 	if (kind == Good.Goods.Cotton):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-cotton.png")
+		$Texture.texture = load("res://assets/images/goods/goods-cotton.png")
 	if (kind == Good.Goods.Beer):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-beer.png")
+		$Texture.texture = load("res://assets/images/goods/goods-beer.png")
 	if (kind == Good.Goods.Bricks):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-bricks.png")
+		$Texture.texture = load("res://assets/images/goods/goods-bricks.png")
 	if (kind == Good.Goods.Cocoa):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-cocoa.png")
+		$Texture.texture = load("res://assets/images/goods/goods-cocoa.png")
 	if (kind == Good.Goods.Coffee):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-coffee.png")
+		$Texture.texture = load("res://assets/images/goods/goods-coffee.png")
 	if (kind == Good.Goods.Sugar):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-sugar.png")
+		$Texture.texture = load("res://assets/images/goods/goods-sugar.png")
 	if (kind == Good.Goods.Tabacco):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-tabacco.png")
+		$Texture.texture = load("res://assets/images/goods/goods-tabacco.png")
 	if (kind == Good.Goods.Silk):
-		$Texture.texture_normal = load("res://assets/images/goods/goods-silk.png")
+		$Texture.texture = load("res://assets/images/goods/goods-silk.png")
 	
 	syncLabels()
 
@@ -38,7 +38,7 @@ func _ready():
 
 func syncLabels():
 	if kind == Good.Goods.Grain:
-		$Texture.hint_tooltip = "Grain"
+		$Tooltip.hint_tooltip = "Grain"
 		$Sell/Amount.text = str(Market.current.grainAmount)
 		$Sell/Price.text = str(Market.current.grainSellPrice)
 		$Buy/Amount.text = str(Player.grainAmount)
@@ -67,7 +67,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Corn:
-		$Texture.hint_tooltip = "Corn"
+		$Tooltip.hint_tooltip = "Corn"
 		$Sell/Amount.text = str(Market.current.cornAmount)
 		$Sell/Price.text = str(Market.current.cornSellPrice)
 		$Buy/Amount.text = str(Player.cornAmount)
@@ -96,7 +96,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Vegetables:
-		$Texture.hint_tooltip = "Vegetables"
+		$Tooltip.hint_tooltip = "Vegetables"
 		$Sell/Amount.text = str(Market.current.vegetablesAmount)
 		$Sell/Price.text = str(Market.current.vegetablesSellPrice)
 		$Buy/Amount.text = str(Player.vegetablesAmount)
@@ -125,7 +125,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Fruits:
-		$Texture.hint_tooltip = "Fruits"
+		$Tooltip.hint_tooltip = "Fruits"
 		$Sell/Amount.text = str(Market.current.fruitsAmount)
 		$Sell/Price.text = str(Market.current.fruitsSellPrice)
 		$Buy/Amount.text = str(Player.fruitsAmount)
@@ -154,7 +154,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Cotton:
-		$Texture.hint_tooltip = "Cotton"
+		$Tooltip.hint_tooltip = "Cotton"
 		$Sell/Amount.text = str(Market.current.cottonAmount)
 		$Sell/Price.text = str(Market.current.cottonSellPrice)
 		$Buy/Amount.text = str(Player.cottonAmount)
@@ -183,7 +183,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Beer:
-		$Texture.hint_tooltip = "Beer"
+		$Tooltip.hint_tooltip = "Beer"
 		$Sell/Amount.text = str(Market.current.beerAmount)
 		$Sell/Price.text = str(Market.current.beerSellPrice)
 		$Buy/Amount.text = str(Player.beerAmount)
@@ -212,7 +212,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Bricks:
-		$Texture.hint_tooltip = "Bricks"
+		$Tooltip.hint_tooltip = "Bricks"
 		$Sell/Amount.text = str(Market.current.bricksAmount)
 		$Sell/Price.text = str(Market.current.bricksSellPrice)
 		$Buy/Amount.text = str(Player.bricksAmount)
@@ -241,7 +241,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Cocoa:
-		$Texture.hint_tooltip = "Cocoa"
+		$Tooltip.hint_tooltip = "Cocoa"
 		$Sell/Amount.text = str(Market.current.cocoaAmount)
 		$Sell/Price.text = str(Market.current.cocoaSellPrice)
 		$Buy/Amount.text = str(Player.cocoaAmount)
@@ -270,7 +270,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Coffee:
-		$Texture.hint_tooltip = "Coffee"
+		$Tooltip.hint_tooltip = "Coffee"
 		$Sell/Amount.text = str(Market.current.coffeeAmount)
 		$Sell/Price.text = str(Market.current.coffeeSellPrice)
 		$Buy/Amount.text = str(Player.coffeeAmount)
@@ -299,7 +299,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Sugar:
-		$Texture.hint_tooltip = "Sugar"
+		$Tooltip.hint_tooltip = "Sugar"
 		$Sell/Amount.text = str(Market.current.sugarAmount)
 		$Sell/Price.text = str(Market.current.sugarSellPrice)
 		$Buy/Amount.text = str(Player.sugarAmount)
@@ -328,7 +328,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Tabacco:
-		$Texture.hint_tooltip = "Tabacco"
+		$Tooltip.hint_tooltip = "Tabacco"
 		$Sell/Amount.text = str(Market.current.tabaccoAmount)
 		$Sell/Price.text = str(Market.current.tabaccoSellPrice)
 		$Buy/Amount.text = str(Player.tabaccoAmount)
@@ -357,7 +357,7 @@ func syncLabels():
 			$AveragePrice.visible = false
 
 	elif kind == Good.Goods.Silk:
-		$Texture.hint_tooltip = "Silk"
+		$Tooltip.hint_tooltip = "Silk"
 		$Sell/Amount.text = str(Market.current.silkAmount)
 		$Sell/Price.text = str(Market.current.silkSellPrice)
 		$Buy/Amount.text = str(Player.silkAmount)
