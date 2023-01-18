@@ -20,10 +20,10 @@ func calcDaysPassed():
 	Player.currentDay += daysPassed
 
 func calcShipDamage():
-	Ship.current.currHp -= int(daysPassed*0.2)
+	Ship.current.currHp -= int(daysPassed*0.4)
 
 func calcCrewTravelLoss():
-	Ship.current.currCrew -= int(daysPassed*0.1)
+	Ship.current.currCrew -= int(daysPassed*0.2)
 
 func calcCrewWages():
 	Player.gold -= int(float(daysPassed) * Ship.crewWagesPerDay * Ship.current.currCrew)

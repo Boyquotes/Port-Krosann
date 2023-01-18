@@ -32,7 +32,7 @@ var current:ShipBase = Types[Ships.Pinnace].new()
 var minHpToSetSail = 0.3
 var minCrewToSetSail = 0.5
 var hireCost = 28
-var crewWagesPerDay = 0.2
+var crewWagesPerDay = 0.4
 
 class ShipBase:
 	pass
