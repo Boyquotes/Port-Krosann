@@ -30,3 +30,6 @@ const Names = {
 	Goods.Tabacco: "Tabacco",
 	Goods.Silk: "Silk"
 }
+
+func reset():
+	pass

@@ -558,6 +558,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.grainAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.grainBuyPrice:
+			buyAmount = int(Player.gold / Market.current.grainBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.grainBuyPrice * buyAmount:
 			Player.gold -= Market.current.grainBuyPrice * buyAmount
@@ -576,6 +582,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.cornAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.cornBuyPrice:
+			buyAmount = int(Player.gold / Market.current.cornBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.cornBuyPrice * buyAmount:
 			Player.gold -= Market.current.cornBuyPrice * buyAmount
@@ -594,6 +606,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.vegetablesAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.vegetablesBuyPrice:
+			buyAmount = int(Player.gold / Market.current.vegetablesBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.vegetablesBuyPrice * buyAmount:
 			Player.gold -= Market.current.vegetablesBuyPrice * buyAmount
@@ -612,6 +630,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.fruitsAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.fruitsBuyPrice:
+			buyAmount = int(Player.gold / Market.current.fruitsBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.fruitsBuyPrice * buyAmount:
 			Player.gold -= Market.current.fruitsBuyPrice * buyAmount
@@ -630,6 +654,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.cottonAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.cottonBuyPrice:
+			buyAmount = int(Player.gold / Market.current.cottonBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.cottonBuyPrice * buyAmount:
 			Player.gold -= Market.current.cottonBuyPrice * buyAmount
@@ -648,6 +678,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.beerAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.beerBuyPrice:
+			buyAmount = int(Player.gold / Market.current.beerBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.beerBuyPrice * buyAmount:
 			Player.gold -= Market.current.beerBuyPrice * buyAmount
@@ -666,6 +702,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.bricksAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.bricksBuyPrice:
+			buyAmount = int(Player.gold / Market.current.bricksBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.bricksBuyPrice * buyAmount:
 			Player.gold -= Market.current.bricksBuyPrice * buyAmount
@@ -684,6 +726,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.cocoaAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.cocoaBuyPrice:
+			buyAmount = int(Player.gold / Market.current.cocoaBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.cocoaBuyPrice * buyAmount:
 			Player.gold -= Market.current.cocoaBuyPrice * buyAmount
@@ -702,6 +750,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.coffeeAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.coffeeBuyPrice:
+			buyAmount = int(Player.gold / Market.current.coffeeBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.coffeeBuyPrice * buyAmount:
 			Player.gold -= Market.current.coffeeBuyPrice * buyAmount
@@ -720,6 +774,12 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.sugarAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.sugarBuyPrice:
+			buyAmount = int(Player.gold / Market.current.sugarBuyPrice)
+		
+		if buyAmount <= 0:
+			return
+
 
 		if Player.gold >= Market.current.sugarBuyPrice * buyAmount:
 			Player.gold -= Market.current.sugarBuyPrice * buyAmount
@@ -738,6 +798,11 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.tabaccoAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.tabaccoBuyPrice:
+			buyAmount = int(Player.gold / Market.current.tabaccoBuyPrice)
+		
+		if buyAmount <= 0:
+			return
 
 		if Player.gold >= Market.current.tabaccoBuyPrice * buyAmount:
 			Player.gold -= Market.current.tabaccoBuyPrice * buyAmount
@@ -756,6 +821,11 @@ func _on_ButtonBuy_button_up():
 			buyAmount = Market.current.silkAmount
 		if Ship.current.currCargo + buyAmount > Ship.current.maxCargo:
 			buyAmount = Ship.current.maxCargo - Ship.current.currCargo
+		if Player.gold < buyAmount * Market.current.silkBuyPrice:
+			buyAmount = int(Player.gold / Market.current.silkBuyPrice)
+		
+		if buyAmount <= 0:
+			return
 
 		if Player.gold >= Market.current.silkBuyPrice * buyAmount:
 			Player.gold -= Market.current.silkBuyPrice * buyAmount

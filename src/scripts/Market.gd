@@ -229,3 +229,6 @@ class Market:
 		silkBuyPrice = int(rawPrice + ((rawPrice/100) * (buySellMargin/2)))
 		#warning-ignore:integer_division
 		silkSellPrice = int(rawPrice - ((rawPrice/100) * (buySellMargin/2)))
+
+func reset():
+	current = krosannMarket

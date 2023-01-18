@@ -32,3 +32,6 @@ const Names = {
 }
 
 var current = Harbors.Krosann
+
+func reset():
+	current = Harbors.Krosann

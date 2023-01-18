@@ -180,24 +180,5 @@ class Liner extends ShipBase:
 	var upkeep = 320
 	var cost = 200000
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func reset():
+	current = Types[Ships.Pinnace].new()

@@ -41,8 +41,8 @@ color = Color( 0, 0, 0, 0.470588 )
 position = Vector2( 968, 408 )
 
 [node name="Body" type="Sprite" parent="Window"]
-position = Vector2( 0, 149.25 )
-scale = Vector2( 0.589259, 0.36233 )
+position = Vector2( 0, 174.25 )
+scale = Vector2( 0.589259, 0.437973 )
 texture = ExtResource( 2 )
 
 [node name="Head" type="Sprite" parent="Window"]
@@ -65,7 +65,7 @@ valign = 1
 margin_left = 806.0
 margin_top = 450.0
 margin_right = 1125.0
-margin_bottom = 615.0
+margin_bottom = 659.0
 custom_colors/font_color = Color( 0.423529, 0.298039, 0.0313726, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Title Text"
@@ -75,18 +75,18 @@ autowrap = true
 
 [node name="OkButton" type="TextureButton" parent="."]
 margin_left = 890.0
-margin_top = 620.0
+margin_top = 666.0
 margin_right = 1047.0
-margin_bottom = 655.0
+margin_bottom = 701.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 7 )
 
 [node name="BtnLabel" type="Label" parent="."]
 margin_left = 891.0
-margin_top = 626.0
+margin_top = 672.0
 margin_right = 1046.0
-margin_bottom = 650.0
+margin_bottom = 696.0
 custom_colors/font_color = Color( 0.960784, 0.921569, 0.658824, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Ok"

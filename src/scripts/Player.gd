@@ -35,6 +35,32 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func reset():
+	gold = 5000
+	currentDay = 1
+	grainAmount = 0
+	cornAmount = 0
+	vegetablesAmount = 0
+	fruitsAmount = 0
+	cottonAmount = 0
+	beerAmount = 0
+	bricksAmount = 0
+	cocoaAmount = 0
+	coffeeAmount = 0
+	sugarAmount = 0
+	tabaccoAmount = 0 
+	silkAmount = 0
+
+	grainAveragePrice = 0
+	cornAveragePrice = 0
+	vegetablesAveragePrice = 0
+	fruitsAveragePrice = 0
+	cottonAveragePrice = 0
+	beerAveragePrice = 0
+	bricksAveragePrice = 0
+	cocoaAveragePrice = 0
+	coffeeAveragePrice = 0
+	sugarAveragePrice = 0
+	tabaccoAveragePrice = 0 
+	silkAveragePrice = 0
+	
