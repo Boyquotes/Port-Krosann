@@ -7,8 +7,11 @@ func _ready():
 	calcDaysPassed()
 	calcShipDamage()
 	calcCrewTravelLoss()
+	calcCrewWages()
 	$AnimationPlayer.play("Rotate")
-	$Label.text = "Sailing to " + Harbor.Names[Harbor.current] + " whithin " + str(daysPassed) + " days "
+	$LabelHarborName.text = Harbor.Names[Harbor.current]
+	$LabelDaysAmount.text = str(daysPassed) + " days "
+	$LabelWagesAmount.text = str(int(float(daysPassed) * Ship.crewWagesPerDay * Ship.current.currCrew))
 
 func calcDaysPassed():
 	var rng = RandomNumberGenerator.new()
@@ -21,6 +24,9 @@ func calcShipDamage():
 
 func calcCrewTravelLoss():
 	Ship.current.currCrew -= int(daysPassed*0.1)
+
+func calcCrewWages():
+	Player.gold -= int(float(daysPassed) * Ship.crewWagesPerDay * Ship.current.currCrew)
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Rotate":
