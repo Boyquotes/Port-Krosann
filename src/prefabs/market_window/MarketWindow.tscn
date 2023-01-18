@@ -151,6 +151,7 @@ margin_left = 1.0
 margin_top = 2.0
 margin_right = 69.0
 margin_bottom = 39.0
+hint_tooltip = "Amount to buy/sell at once"
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 7 )

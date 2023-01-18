@@ -1,7 +1,7 @@
 extends Node
 
 
-var gold:int = 10000
+var gold:int = 5000
 var currentDay:int = 1
 
 var grainAmount:int = 0

@@ -99,8 +99,7 @@ text = "1000"
 valign = 1
 
 [node name="ShipyardWindow" parent="." instance=ExtResource( 10 )]
-visible = false
-position = Vector2( 1331, 327 )
+position = Vector2( 1365, 275 )
 
 [node name="Day" type="Control" parent="."]
 margin_left = 1511.0
