@@ -31,7 +31,7 @@ var Types = {
 var current:ShipBase = Types[Ships.Pinnace].new()
 var minHpToSetSail = 0.3
 var minCrewToSetSail = 0.5
-var hireCost = 28
+var hireCost = 41
 var crewWagesPerDay = 0.4
 
 class ShipBase:
@@ -40,28 +40,28 @@ class ShipBase:
 class Pinnace extends ShipBase:
 	var name = "Pinnace"
 	var texture:Texture = load("res://assets/images/ships/01-Pinnace.png")
-	var maxCargo = 200
+	var maxCargo = 120
 	var currCargo = 0
 	var maxHp = 100
 	var currHp = 100
 	var maxCrew = 40
 	var currCrew = 40
-	var speed = 10
+	var speed = 8
 	var upkeep = 100
-	var cost = 10000
+	var cost = 25000
 
 class Sloop extends ShipBase:
 	var name = "Sloop"
 	var texture:Texture = load("res://assets/images/ships/02-Sloop.png")
-	var maxCargo = 210
+	var maxCargo = 200
 	var currCargo = 0
 	var maxHp = 110
 	var currHp = 110
 	var maxCrew = 70
 	var currCrew = 70
-	var speed = 11
+	var speed = 10
 	var upkeep = 110
-	var cost = 19000
+	var cost = 39000
 
 class Brig extends ShipBase:
 	var name = "Brig"
@@ -74,7 +74,7 @@ class Brig extends ShipBase:
 	var currCrew = 80
 	var speed = 11
 	var upkeep = 140
-	var cost = 27000
+	var cost = 57000
 
 class Barc extends ShipBase:
 	var name = "Barc"
@@ -87,7 +87,7 @@ class Barc extends ShipBase:
 	var currCrew = 100
 	var speed = 12
 	var upkeep = 150
-	var cost = 36000
+	var cost = 86000
 
 class Fluyt extends ShipBase:
 	var name = "Fluyt"
@@ -100,7 +100,7 @@ class Fluyt extends ShipBase:
 	var currCrew = 80
 	var speed = 10
 	var upkeep = 220
-	var cost = 40000
+	var cost = 120000
 
 class Corvette extends ShipBase:
 	var name = "Corvette"
@@ -113,7 +113,7 @@ class Corvette extends ShipBase:
 	var currCrew = 120
 	var speed = 12
 	var upkeep = 200
-	var cost = 60000
+	var cost = 180000
 
 class Frigate extends ShipBase:
 	var name = "Frigate"
@@ -126,7 +126,7 @@ class Frigate extends ShipBase:
 	var currCrew = 130
 	var speed = 11
 	var upkeep = 220
-	var cost = 70000
+	var cost = 260000
 
 class Galleon extends ShipBase:
 	var name = "Galleon"
@@ -139,7 +139,7 @@ class Galleon extends ShipBase:
 	var currCrew = 180
 	var speed = 10
 	var upkeep = 280
-	var cost = 120000
+	var cost = 380000
 
 class Carrack extends ShipBase:
 	var name = "Carrack"
@@ -152,7 +152,7 @@ class Carrack extends ShipBase:
 	var currCrew = 200
 	var speed = 12
 	var upkeep = 320
-	var cost = 140000
+	var cost = 440000
 
 class Caravel extends ShipBase:
 	var name = "Caravel"
@@ -165,7 +165,7 @@ class Caravel extends ShipBase:
 	var currCrew = 200
 	var speed = 11
 	var upkeep = 300
-	var cost = 160000
+	var cost = 520000
 
 class Liner extends ShipBase:
 	var name = "Liner"
@@ -174,11 +174,11 @@ class Liner extends ShipBase:
 	var currCargo = 0
 	var maxHp = 340
 	var currHp = 340
-	var maxCrew = 350
-	var currCrew = 350
+	var maxCrew = 300
+	var currCrew = 300
 	var speed = 14
 	var upkeep = 320
-	var cost = 200000
+	var cost = 600000
 
 func reset():
 	current = Types[Ships.Pinnace].new()
