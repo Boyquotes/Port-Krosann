@@ -122,12 +122,12 @@ func _handle_ship_icon():
 	
 	var posOffset = 45
 	if shipIconPos == ShipIconPos.N:
-		$ShipIcon.position.y = -posOffset
+		$ShipIcon.position.y = -posOffset - posOffset/2
 	elif shipIconPos == ShipIconPos.NE:
 		$ShipIcon.position.y = -posOffset
 		$ShipIcon.position.x = posOffset
 	elif shipIconPos == ShipIconPos.E:
-		$ShipIcon.position.x = posOffset
+		$ShipIcon.position.x = posOffset + posOffset/2
 	elif shipIconPos == ShipIconPos.SE:
 		$ShipIcon.position.y = posOffset * 2
 		$ShipIcon.position.x = posOffset * 2
@@ -137,7 +137,7 @@ func _handle_ship_icon():
 		$ShipIcon.position.y = posOffset * 2
 		$ShipIcon.position.x = -posOffset * 2
 	elif shipIconPos == ShipIconPos.W:
-		$ShipIcon.position.x = -posOffset
+		$ShipIcon.position.x = -posOffset - posOffset/2
 	elif shipIconPos == ShipIconPos.NW:
 		$ShipIcon.position.y = -posOffset
 		$ShipIcon.position.x = -posOffset

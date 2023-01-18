@@ -43,7 +43,7 @@ __meta__ = {
 }
 harbor = 1
 
-[node name="HarborMapButton" parent="HarborButtons" instance=ExtResource( 10 )]
+[node name="Toladar" parent="HarborButtons" instance=ExtResource( 10 )]
 margin_left = 1172.0
 margin_top = 313.0
 margin_right = 1213.0
@@ -54,7 +54,7 @@ __meta__ = {
 harbor = 2
 shipIconPos = 4
 
-[node name="HarborMapButton2" parent="HarborButtons" instance=ExtResource( 10 )]
+[node name="Alandar" parent="HarborButtons" instance=ExtResource( 10 )]
 margin_left = 1584.0
 margin_top = 447.0
 margin_right = 1625.0
@@ -64,6 +64,90 @@ __meta__ = {
 }
 harbor = 3
 shipIconPos = 4
+
+[node name="Winslorien" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 1817.0
+margin_top = 370.0
+margin_right = 1858.0
+margin_bottom = 410.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 4
+shipIconPos = 2
+
+[node name="Akadesh" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 1231.0
+margin_top = 611.0
+margin_right = 1272.0
+margin_bottom = 651.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 5
+
+[node name="Tanderheim" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 1525.0
+margin_top = 89.0
+margin_right = 1566.0
+margin_bottom = 129.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 6
+
+[node name="Garemalan" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 659.0
+margin_top = 220.0
+margin_right = 700.0
+margin_bottom = 260.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 7
+shipIconPos = 4
+
+[node name="Marein" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 392.0
+margin_top = 369.0
+margin_right = 433.0
+margin_bottom = 409.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 8
+
+[node name="Forand" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 595.0
+margin_top = 917.0
+margin_right = 636.0
+margin_bottom = 957.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 9
+
+[node name="Toshir" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 1664.0
+margin_top = 913.0
+margin_right = 1705.0
+margin_bottom = 953.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 10
+shipIconPos = 4
+
+[node name="Shotar" parent="HarborButtons" instance=ExtResource( 10 )]
+margin_left = 1396.0
+margin_top = 921.0
+margin_right = 1437.0
+margin_bottom = 961.0
+__meta__ = {
+"_edit_group_": true
+}
+harbor = 11
+shipIconPos = 2
 
 [node name="BtnToShip" type="TextureButton" parent="."]
 margin_left = 1785.0

@@ -390,110 +390,158 @@ func syncLabels():
 
 func _on_ButtonSell_button_up():
 	if kind == Good.Goods.Grain:
-		if Player.grainAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.grainSellPrice * Market.buySellAmount
-			Market.current.grainAmount += Market.buySellAmount
-			Player.grainAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.grainAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.grainAmount < sellAmount:
+				sellAmount = Player.grainAmount
+
+			Player.gold += Market.current.grainSellPrice * sellAmount
+			Market.current.grainAmount += sellAmount
+			Player.grainAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.grainAmount <= 0:
 				Player.grainAveragePrice = 0
 
 	elif kind == Good.Goods.Corn:
-		if Player.cornAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.cornSellPrice * Market.buySellAmount
-			Market.current.cornAmount += Market.buySellAmount
-			Player.cornAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.cornAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.cornAmount < sellAmount:
+				sellAmount = Player.cornAmount
+
+			Player.gold += Market.current.cornSellPrice * sellAmount
+			Market.current.cornAmount += sellAmount
+			Player.cornAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.cornAmount <= 0:
 				Player.cornAveragePrice = 0
 	
 	elif kind == Good.Goods.Vegetables:
-		if Player.vegetablesAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.vegetablesSellPrice * Market.buySellAmount
-			Market.current.vegetablesAmount += Market.buySellAmount
-			Player.vegetablesAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.vegetablesAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.vegetablesAmount < sellAmount:
+				sellAmount = Player.vegetablesAmount
+
+			Player.gold += Market.current.vegetablesSellPrice * sellAmount
+			Market.current.vegetablesAmount += sellAmount
+			Player.vegetablesAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.vegetablesAmount <= 0:
 				Player.vegetablesAveragePrice = 0
 
 	elif kind == Good.Goods.Fruits:
-		if Player.fruitsAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.fruitsSellPrice * Market.buySellAmount
-			Market.current.fruitsAmount += Market.buySellAmount
-			Player.fruitsAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.fruitsAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.fruitsAmount < sellAmount:
+				sellAmount = Player.fruitsAmount
+
+			Player.gold += Market.current.fruitsSellPrice * sellAmount
+			Market.current.fruitsAmount += sellAmount
+			Player.fruitsAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.fruitsAmount <= 0:
 				Player.fruitsAveragePrice = 0
 
 	elif kind == Good.Goods.Cotton:
-		if Player.cottonAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.cottonSellPrice * Market.buySellAmount
-			Market.current.cottonAmount += Market.buySellAmount
-			Player.cottonAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.cottonAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.cottonAmount < sellAmount:
+				sellAmount = Player.cottonAmount
+
+			Player.gold += Market.current.cottonSellPrice * sellAmount
+			Market.current.cottonAmount += sellAmount
+			Player.cottonAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.cottonAmount <= 0:
 				Player.cottonAveragePrice = 0
 
 	elif kind == Good.Goods.Beer:
-		if Player.beerAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.beerSellPrice * Market.buySellAmount
-			Market.current.beerAmount += Market.buySellAmount
-			Player.beerAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.beerAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.beerAmount < sellAmount:
+				sellAmount = Player.beerAmount
+
+			Player.gold += Market.current.beerSellPrice * sellAmount
+			Market.current.beerAmount += sellAmount
+			Player.beerAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.beerAmount <= 0:
 				Player.beerAveragePrice = 0
 
 	elif kind == Good.Goods.Bricks:
-		if Player.bricksAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.bricksSellPrice * Market.buySellAmount
-			Market.current.bricksAmount += Market.buySellAmount
-			Player.bricksAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.bricksAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.bricksAmount < sellAmount:
+				sellAmount = Player.bricksAmount
+
+			Player.gold += Market.current.bricksSellPrice * sellAmount
+			Market.current.bricksAmount += sellAmount
+			Player.bricksAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.bricksAmount <= 0:
 				Player.bricksAveragePrice = 0
 
 	elif kind == Good.Goods.Cocoa:
-		if Player.cocoaAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.cocoaSellPrice * Market.buySellAmount
-			Market.current.cocoaAmount += Market.buySellAmount
-			Player.cocoaAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.cocoaAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.cocoaAmount < sellAmount:
+				sellAmount = Player.cocoaAmount
+
+			Player.gold += Market.current.cocoaSellPrice * sellAmount
+			Market.current.cocoaAmount += sellAmount
+			Player.cocoaAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.cocoaAmount <= 0:
 				Player.cocoaAveragePrice = 0
 
 	elif kind == Good.Goods.Coffee:
-		if Player.coffeeAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.coffeeSellPrice * Market.buySellAmount
-			Market.current.coffeeAmount += Market.buySellAmount
-			Player.coffeeAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.coffeeAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.coffeeAmount < sellAmount:
+				sellAmount = Player.coffeeAmount
+
+			Player.gold += Market.current.coffeeSellPrice * sellAmount
+			Market.current.coffeeAmount += sellAmount
+			Player.coffeeAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.coffeeAmount <= 0:
 				Player.coffeeAveragePrice = 0
 
 	elif kind == Good.Goods.Sugar:
-		if Player.sugarAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.sugarSellPrice * Market.buySellAmount
-			Market.current.sugarAmount += Market.buySellAmount
-			Player.sugarAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.sugarAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.sugarAmount < sellAmount:
+				sellAmount = Player.sugarAmount
+
+			Player.gold += Market.current.sugarSellPrice * sellAmount
+			Market.current.sugarAmount += sellAmount
+			Player.sugarAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.sugarAmount <= 0:
 				Player.sugarAveragePrice = 0
 
 	elif kind == Good.Goods.Tabacco:
-		if Player.tabaccoAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.tabaccoSellPrice * Market.buySellAmount
-			Market.current.tabaccoAmount += Market.buySellAmount
-			Player.tabaccoAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.tabaccoAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.tabaccoAmount < sellAmount:
+				sellAmount = Player.tabaccoAmount
+
+			Player.gold += Market.current.tabaccoSellPrice * sellAmount
+			Market.current.tabaccoAmount += sellAmount
+			Player.tabaccoAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.tabaccoAmount <= 0:
 				Player.tabaccoAveragePrice = 0
 
 	elif kind == Good.Goods.Silk:
-		if Player.silkAmount >= Market.buySellAmount and Ship.current.currCargo >= Market.buySellAmount:
-			Player.gold += Market.current.silkSellPrice * Market.buySellAmount
-			Market.current.silkAmount += Market.buySellAmount
-			Player.silkAmount -= Market.buySellAmount
-			Ship.current.currCargo -= Market.buySellAmount
+		if Player.silkAmount > 0:
+			var sellAmount = Market.buySellAmount
+			if Player.silkAmount < sellAmount:
+				sellAmount = Player.silkAmount
+
+			Player.gold += Market.current.silkSellPrice * sellAmount
+			Market.current.silkAmount += sellAmount
+			Player.silkAmount -= sellAmount
+			Ship.current.currCargo -= sellAmount
 			if Player.silkAmount <= 0:
 				Player.silkAveragePrice = 0
 

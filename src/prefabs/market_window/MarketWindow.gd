@@ -7,6 +7,8 @@ func _on_BtnBuySellAmount_button_up():
 	if Market.buySellAmount == 1:
 		Market.buySellAmount = 10
 	elif Market.buySellAmount == 10:
+		Market.buySellAmount = 50
+	elif Market.buySellAmount == 50:
 		Market.buySellAmount = 100
 	elif Market.buySellAmount == 100:
 		Market.buySellAmount = 1
