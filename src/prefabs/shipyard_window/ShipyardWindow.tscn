@@ -8,9 +8,15 @@
 position = Vector2( -1, 0 )
 
 [node name="Head" type="Sprite" parent="."]
-position = Vector2( 21.5, -7 )
-scale = Vector2( 1.18142, 0.767123 )
+position = Vector2( 24.9993, -8.5 )
+scale = Vector2( 1.19174, 0.726027 )
 texture = ExtResource( 1 )
+
+[node name="Body" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.705882 )
+position = Vector2( 27, 258.5 )
+scale = Vector2( 1.19416, 0.727685 )
+texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = -242.0
@@ -22,11 +28,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "Shipyard"
 align = 1
 valign = 1
-
-[node name="Body" type="Sprite" parent="."]
-position = Vector2( 26.25, 243.5 )
-scale = Vector2( 1.18759, 0.673222 )
-texture = ExtResource( 2 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = -376.0
