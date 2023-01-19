@@ -31,17 +31,17 @@ func _process(_delta):
 	else:
 		$Gold/Label.modulate = Color(1, 1, 1)
 	
-	if Player.gold <= 0 and float(Ship.current.currHp)/float(Ship.current.maxHp) < Ship.minHpToSetSail:
-		Global.infoWindowTitle = "Game Lost"
-		Global.infoWindowText = "Your gold went negative (" + str(Player.gold) + ") and you cannot affort to repair your ship. Good luck on your next try!"
-		$InfoWindow.show()
-		Global.resetGameState()
-	
-	if Player.gold <= 0 and float(Ship.current.currCrew)/float(Ship.current.maxCrew) < Ship.minCrewToSetSail:
-		Global.infoWindowTitle = "Game Lost"
-		Global.infoWindowText = "Your gold went negative (" + str(Player.gold) + ") and you cannot affort to hire enough crew to set sail. Good luck on your next try!"
-		$InfoWindow.show()
-		Global.resetGameState()
+#	if Player.gold <= 0 and float(Ship.current.currHp)/float(Ship.current.maxHp) < Ship.minHpToSetSail:
+#		Global.infoWindowTitle = "Game Lost"
+#		Global.infoWindowText = "Your gold went negative (" + str(Player.gold) + ") and you cannot affort to repair your ship. Good luck on your next try!"
+#		$InfoWindow.show()
+#		Global.resetGameState()
+#
+#	if Player.gold <= 0 and float(Ship.current.currCrew)/float(Ship.current.maxCrew) < Ship.minCrewToSetSail:
+#		Global.infoWindowTitle = "Game Lost"
+#		Global.infoWindowText = "Your gold went negative (" + str(Player.gold) + ") and you cannot affort to hire enough crew to set sail. Good luck on your next try!"
+#		$InfoWindow.show()
+#		Global.resetGameState()
 
 	if Player.currentDay >= Player.daysToWin and Player.goalMissed == false:
 		Player.goalMissed = true
@@ -71,3 +71,7 @@ func _on_ShipButton_button_up():
 	$ShipButton.visible = false
 	$ShipyardWindow.visible = false
 	$ShipyardButton.visible = true
+
+
+func _on_SettingsButton_button_up():
+	$GameMenu.visible = true

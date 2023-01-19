@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://prefabs/info_window/InfoWindow.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/map-small.png" type="Texture" id=2]
 [ext_resource path="res://screens/worldmap/WorldMap.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/settings-btn-hover.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/settings-btn.png" type="Texture" id=5]
+[ext_resource path="res://prefabs/game_menu/GameMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/images/to-ship-btn.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/to-ship-btn-hover.png" type="Texture" id=8]
 [ext_resource path="res://prefabs/harbor_map_button/HarborMapButton.tscn" type="PackedScene" id=10]
@@ -17,7 +20,6 @@ __meta__ = {
 
 [node name="WorldMap" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="HarborButtons" type="Control" parent="."]
@@ -151,9 +153,10 @@ shipIconPos = 2
 
 [node name="BtnToShip" type="TextureButton" parent="."]
 margin_left = 1798.0
-margin_top = 960.0
+margin_top = 950.0
 margin_right = 1896.0
-margin_bottom = 1057.0
+margin_bottom = 1045.0
+hint_tooltip = "Harbor"
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
@@ -161,4 +164,20 @@ texture_hover = ExtResource( 8 )
 [node name="InfoWindow" parent="." instance=ExtResource( 1 )]
 visible = false
 
+[node name="SettingsButton" type="TextureButton" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 32.0
+margin_top = 410.0
+margin_right = 128.0
+margin_bottom = 505.0
+hint_tooltip = "Settings"
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+
+[node name="GameMenu" parent="." instance=ExtResource( 6 )]
+visible = false
+
 [connection signal="button_up" from="BtnToShip" to="." method="_on_BtnToShip_button_up"]
+[connection signal="button_up" from="SettingsButton" to="." method="_on_SettingsButton_button_up"]
