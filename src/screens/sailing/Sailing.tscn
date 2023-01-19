@@ -23,7 +23,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "Rotate"
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Steeringwheel:rotation_degrees")
 tracks/0/interp = 2
@@ -31,10 +31,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 360.0, 720.0 ]
+"values": [ 0.0, 1440.0 ]
 }
 
 [node name="Sailing" type="Control"]
