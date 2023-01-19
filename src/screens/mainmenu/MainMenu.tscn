@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/images/btn.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/images/background01.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/FrenchScriptMT.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://screens/mainmenu/MainMenu.gd" type="Script" id=6]
+[ext_resource path="res://assets/fonts/heading.tres" type="DynamicFont" id=7]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -193,5 +194,17 @@ custom_fonts/font = SubResource( 3 )
 text = "© by Michael Binder"
 align = 1
 valign = 1
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1610.0
+margin_top = 238.0
+margin_right = 1690.0
+margin_bottom = 282.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = ExtResource( 7 )
+text = "Beta"
 
 [connection signal="button_up" from="Menu/Start/StartBtn" to="." method="_on_StartBtn_button_up"]
