@@ -3,6 +3,10 @@ extends Node
 
 var gold:int = 5000
 var currentDay:int = 1
+var daysToWin:int = 1000
+var goldToWin:int = 5000000
+var goalMissed = false
+var goalReached = false
 
 var grainAmount:int = 0
 var cornAmount:int = 0

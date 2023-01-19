@@ -1,0 +1,197 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/images/btn.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/btn-hover.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/background01.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/FrenchScriptMT.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://screens/mainmenu/MainMenu.gd" type="Script" id=6]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background/Bg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1036, 539 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "camera_breath"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background/Bg:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1036, 539 ), Vector2( 1097, 528 ), Vector2( 1012, 524 ), Vector2( 999, 554 ), Vector2( 950, 550 ), Vector2( 1036, 539 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 164
+outline_size = 1
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Bg" type="Sprite" parent="Background"]
+position = Vector2( 1036, 539 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+root_node = NodePath("../..")
+autoplay = "camera_breath"
+anims/RESET = SubResource( 1 )
+anims/camera_breath = SubResource( 2 )
+
+[node name="Menu" type="Node2D" parent="."]
+position = Vector2( 563, 516 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+margin_left = -19.0
+margin_top = -535.0
+margin_right = 177.0
+margin_bottom = 589.0
+color = Color( 0, 0, 0, 0.392157 )
+
+[node name="Start" type="Node2D" parent="Menu"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StartBtn" type="TextureButton" parent="Menu/Start"]
+margin_right = 157.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Menu/Start"]
+margin_right = 156.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 1, 0.976471, 0.811765, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "New Game"
+align = 1
+valign = 1
+
+[node name="Continue" type="Node2D" parent="Menu"]
+position = Vector2( 0, 51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ContinueBtn" type="TextureButton" parent="Menu/Continue"]
+margin_right = 157.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Menu/Continue"]
+margin_right = 156.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 1, 0.976471, 0.811765, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Continue"
+align = 1
+valign = 1
+
+[node name="Credits" type="Node2D" parent="Menu"]
+position = Vector2( 0, 101 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Credits" type="TextureButton" parent="Menu/Credits"]
+margin_right = 157.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Menu/Credits"]
+margin_right = 156.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 1, 0.976471, 0.811765, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Credits"
+align = 1
+valign = 1
+
+[node name="Quit" type="Node2D" parent="Menu"]
+position = Vector2( 0, 153 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Credits" type="TextureButton" parent="Menu/Quit"]
+margin_right = 157.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Menu/Quit"]
+margin_right = 156.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 1, 0.976471, 0.811765, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+align = 1
+valign = 1
+
+[node name="PortKrosannLabel" type="Label" parent="."]
+margin_left = 900.0
+margin_top = 135.0
+margin_right = 1584.0
+margin_bottom = 323.0
+custom_colors/font_color = Color( 0.968627, 0.890196, 0.65098, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.164706, 0.121569, 0.0470588, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 4 )
+text = "Port Krosann"
+
+[node name="Copyright" type="Label" parent="."]
+margin_left = 1643.0
+margin_top = 1029.0
+margin_right = 1897.0
+margin_bottom = 1062.0
+custom_colors/font_color = Color( 1, 0.976471, 0.811765, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "© by Michael Binder"
+align = 1
+valign = 1
+
+[connection signal="button_up" from="Menu/Start/StartBtn" to="." method="_on_StartBtn_button_up"]

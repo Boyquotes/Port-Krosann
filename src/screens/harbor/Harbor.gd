@@ -43,6 +43,17 @@ func _process(_delta):
 		$InfoWindow.show()
 		Global.resetGameState()
 
+	if Player.currentDay >= Player.daysToWin and Player.goalMissed == false:
+		Player.goalMissed = true
+		Global.infoWindowTitle = "Father"
+		Global.infoWindowText = "Your father is disappointed because you didn't reach the goal. You can keep playing or try again."
+		$InfoWindow.show()
+	elif Player.gold >= Player.goldToWin and Player.goalReached == false:
+		Player.goalReached = true
+		Global.infoWindowTitle = "Father"
+		Global.infoWindowText = "Your father is really proud of you because you reached the goal. You can keep playing or start a new game." 
+		$InfoWindow.show()
+
 func _on_MapButton_button_up():
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://screens/worldmap/WorldMap.tscn")
