@@ -18,8 +18,8 @@ var current = krosannMarket
 var buySellAmount = 1
 
 # Threshhold for calculation of whether it is a really good buy/sell price (just for visual purposes)
-const goodSellTreshhold = 1.7
-const goodBuyTreshhold = 0.8
+const goodSellTreshhold = 1.6
+const goodBuyTreshhold = 1.1
 
 func recalcMarketsExceptFor(harbor:int):
 	if not harbor == Harbor.Harbors.Krosann:
@@ -141,7 +141,7 @@ class Market:
 		tabaccoAmount = randi()%maxAmount+minAmount
 		silkAmount = randi()%maxAmount+minAmount
 		# Prices
-		var factor = 0.05
+		var factor = 0.03
 		grainRandPrice = randi()%(grainBasePrice+(int(grainBasePrice*factor)))+(grainBasePrice-(int(grainBasePrice*factor)))
 		cornRandPrice = randi()%(cornBasePrice+(int(cornBasePrice*factor)))+(cornBasePrice-(int(cornBasePrice*factor)))
 		vegetablesRandPrice = randi()%(vegetablesBasePrice-(int(vegetablesBasePrice*factor)))+(vegetablesBasePrice-(int(vegetablesBasePrice*factor)))
