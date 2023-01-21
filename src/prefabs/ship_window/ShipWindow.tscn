@@ -115,7 +115,7 @@ margin_left = 87.0
 margin_top = 3.0
 margin_right = 374.0
 margin_bottom = 43.0
-hint_tooltip = "The ships Hp must be over 30% in order to set sail"
+hint_tooltip = "The ships status  must be over 30% in order to set sail"
 color = Color( 0, 0, 0, 0.705882 )
 
 [node name="BarRedBg" type="ColorRect" parent="Content/HpBar"]
@@ -160,7 +160,7 @@ margin_right = 73.0
 margin_bottom = 41.0
 custom_colors/font_color = Color( 1, 0.933333, 0.737255, 1 )
 custom_fonts/font = ExtResource( 3 )
-text = "Hp"
+text = "Status"
 align = 1
 valign = 1
 
@@ -316,7 +316,7 @@ margin_left = -50.0
 margin_top = 273.0
 margin_right = 147.0
 margin_bottom = 312.0
-hint_tooltip = "The cost to repair one Hp point"
+hint_tooltip = "The cost to repair one status point"
 color = Color( 0, 0, 0, 0.627451 )
 
 [node name="Label" type="Label" parent="Content/Upkeep"]
@@ -372,7 +372,7 @@ margin_left = -342.0
 margin_top = 338.0
 margin_right = -207.0
 margin_bottom = 375.0
-hint_tooltip = "Repair the ship's Hp"
+hint_tooltip = "Repair the ship"
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 7 )

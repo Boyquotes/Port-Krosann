@@ -173,13 +173,13 @@ margin_bottom = 164.0
 color = Color( 0, 0, 0, 0.627451 )
 
 [node name="HpLabel" type="Label" parent="Content/Desc"]
-margin_left = -33.0
+margin_left = -73.0
 margin_top = 6.0
 margin_right = 4.0
 margin_bottom = 41.0
 custom_colors/font_color = Color( 0.960784, 0.905882, 0.72549, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Hp:"
+text = "Status:"
 valign = 1
 
 [node name="CrewLabel" type="Label" parent="Content/Desc"]
